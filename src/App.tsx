@@ -69,6 +69,8 @@ const SectionTabs: React.FC<SectionTabPanelProps> = ({ items }) => {
         value={value}
         onChange={(_, newValue) => setValue(newValue)}
         aria-label="tabs"
+        allowScrollButtonsMobile
+        variant="scrollable"
       >
         {items.map((item, index) => (
           <Tab key={item.id} label={item.tabName} {...a11yProps(index)} />
