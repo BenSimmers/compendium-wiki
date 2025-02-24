@@ -1,0 +1,1 @@
+export { SectionTabs, CustomTabPanel } from "./sectionTabs";

@@ -24,8 +24,33 @@ interface SectionTabPanelProps {
   items: CompendiumItem[];
 }
 
-interface ColorModeContextType {
+interface ToggleTheme {
   toggleColorMode: () => void;
+}
+
+type InstantAppSchemaState = {
+  content?: {
+    id: string;
+    parentReferenceId: number;
+    tabId: number;
+    tabName: string;
+  }[];
+  $files?: {
+    id: string;
+    path: string;
+    url: string;
+  }[];
+};
+
+interface AppContextType {
+  mode: string;
+  theme: object;
+  toggleColorMode: () => void;
+  isLoading: boolean;
+  data: InstantAppSchemaState;
+  error: { message: string } | undefined;
+  compendiumItems: CompendiumItem[];
+  setCompendiumItems: React.Dispatch<React.SetStateAction<CompendiumItem[]>>;
 }
 
 export {
@@ -33,5 +58,7 @@ export {
   type File,
   type TabPanelProps,
   type SectionTabPanelProps,
-  type ColorModeContextType,
+  type ToggleTheme,
+  type InstantAppSchemaState,
+  type AppContextType,
 };

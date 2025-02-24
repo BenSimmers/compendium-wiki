@@ -36,4 +36,9 @@ const buildCompendiumHierarchy = (items: CompendiumItem[]) => {
   return topLevelItems;
 };
 
-export { assignFilesToCompendium, buildCompendiumHierarchy };
+const a11yProps = (index: number) => ({
+  id: `tab-${index}`,
+  "aria-controls": `tabpanel-${index}`,
+});
+
+export { assignFilesToCompendium, buildCompendiumHierarchy, a11yProps };
