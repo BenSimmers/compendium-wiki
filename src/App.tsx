@@ -1,5 +1,5 @@
 // react imports
-import { createContext, useState, useEffect } from "react";
+import { createContext, useEffect } from "react";
 
 // mui imports
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -19,12 +19,7 @@ import LightModeIcon from "@mui/icons-material/LightMode";
 
 // custom imports
 import { useColorMode } from "./hooks/useColorMode";
-import db from "./data/data.ts";
-import {
-  ToggleTheme,
-  CompendiumItem,
-  InstantAppSchemaState,
-} from "./utils/types.ts";
+import { ToggleTheme, CompendiumItem } from "./utils/types.ts";
 
 import * as helpers from "./helpers/helpers.ts";
 import { LoadingOrError } from "./components/common/loadingOrError/index.ts";
@@ -79,7 +74,7 @@ const App = () => {
           <Toolbar>
             <Grid container alignItems="center">
               <Grid item>
-                <Typography variant="h6">Dnd Compendium Wiki</Typography>
+                <Typography variant="h6">Compendium Wiki</Typography>
               </Grid>
 
               <Grid item sx={{ marginLeft: "auto" }}>

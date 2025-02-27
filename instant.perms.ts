@@ -6,8 +6,8 @@ const rules = {
   "$files": {
     "allow": {
       "view": "true",
-      "create": "true",
-      "delete": "true"
+      "create": "false",
+      "delete": "false"
     }
   }
 } satisfies InstantRules;
