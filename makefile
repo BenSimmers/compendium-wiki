@@ -4,12 +4,9 @@ install:
 	@echo "Done!"
 
 run:
-	@echo "Running..."
-	npm start
-	@echo "Done!"
+	npm run dev
 
 build:
 	@echo "Building..."
 	npm run build
 	@echo "Done!"
-	
