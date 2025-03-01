@@ -1,4 +1,3 @@
-// Type Definitions
 type CompendiumItem = {
   id: string | number;
   tabId: number;
@@ -35,6 +34,19 @@ type InstantAppSchemaState = {
     tabId: number;
     tabName: string;
   }[];
+  /**
+   * files which are uploaded to the instant app
+   * @type {File[]}
+   * @memberof InstantAppSchemaState
+   * @example
+   * ```json
+   * "files": [
+   *  {
+   *   "id": "1",
+   *   "path": "path/to/file",
+   *   "url": "https://example.com/file"
+   * }
+   */
   $files?: {
     id: string;
     path: string;
