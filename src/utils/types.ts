@@ -54,13 +54,17 @@ type InstantAppSchemaState = {
   }[];
 };
 
+type Error = {
+  message: string;
+} | undefined;
+
 interface AppContextType {
   mode: string;
   theme: object;
   toggleColorMode: () => void;
   isLoading: boolean;
   data: InstantAppSchemaState;
-  error: { message: string } | undefined;
+  error: Error;
   compendiumItems: CompendiumItem[];
   setCompendiumItems: React.Dispatch<React.SetStateAction<CompendiumItem[]>>;
 }
