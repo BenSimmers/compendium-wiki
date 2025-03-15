@@ -1,6 +1,6 @@
 // react imports
 import { createContext, useEffect } from "react";
-
+import "./App.css";
 // mui imports
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import {
